@@ -62,3 +62,44 @@ public class Static_2 {
 
 }
 
+------------------------------------------------Hard Problem – Static Variable with Object Tracking-----------------------------------
+class BankAccount {
+
+    int accountNumber;
+    int balance;
+    static int totalAccounts;
+    static String bankName = "Vakif Bank";
+
+    BankAccount(int accountNumber, int balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        totalAccounts++;
+    }
+
+    static int displaytotalaccounts() {
+        return totalAccounts;
+    }
+
+    void displayAccount() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
+        System.out.println();
+    }
+
+}
+
+public class Static_3 {
+    public static void main(String[] args) {
+        BankAccount dollor_account = new BankAccount(223999990, 500);
+        BankAccount Eur_account = new BankAccount(655555433, 300);
+        BankAccount AFG_account = new BankAccount(64335430, 22300);
+        System.out.println("-----------");
+        System.out.println("Bank : " + BankAccount.bankName);
+
+        dollor_account.displayAccount();
+        Eur_account.displayAccount();
+        AFG_account.displayAccount();
+        System.out.println("Bank : " + BankAccount.displaytotalaccounts());
+    }
+
+}
