@@ -1,1 +1,24 @@
-Easy Problem – Static Variable
+----------------------------------------------------   Easy Problem – Static Variable --------------------------------------------------
+class Counter {
+
+    static int count = 0;
+
+    Counter() {
+        count++;
+    }
+
+    public static void getCount() {
+        System.out.println("Total objects created: " + count);
+    }
+}
+
+public class Static_1 {
+    public static void main(String[] args) {
+
+        new Counter();
+        new Counter();
+        new Counter();
+
+        Counter.getCount();   // best practice
+    }
+}
