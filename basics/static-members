@@ -22,3 +22,43 @@ public class Static_1 {
         Counter.getCount();   // best practice
     }
 }
+
+---------------------------------------------------- Medium Problem – Static Method Utility Class-----------------------------------------------
+
+
+class MathUtils {
+
+    public static void isEven(int num) {
+
+        if (num % 2 == 0)
+            System.out.println("it is Even");
+        else
+            System.out.println("it is odd");
+
+    }
+
+    public static void square(int num) {
+
+        System.out.println(num * num);
+
+    }
+
+    public static void max(int a, int b) {
+        if (a > b)
+            System.out.println(a);
+        else
+            System.out.println(b);
+    }
+
+}
+
+public class Static_2 {
+    public static void main(String[] args) {
+        MathUtils.isEven(5);
+        MathUtils.square(5);
+        MathUtils.max(5, 9);
+
+    }
+
+}
+
